@@ -1,10 +1,10 @@
 ---
 name: React
 description: A JavaScript library for building user interfaces
-url: http://facebook.github.io
-baseurl: "/react"
-permalink: "/blog/:year/:month/:day/:title.html"
-paginate_path: "/blog/page:num/"
+url: https://facebook.github.io
+baseurl: /react
+permalink: /blog/:year/:month/:day/:title.html
+paginate_path: /blog/page:num/
 relative_permalinks: true
 paginate: 5
 timezone: America/Los_Angeles
@@ -25,13 +25,15 @@ exclude:
 - Gemfile.lock
 - README.md
 - Rakefile
+- vendor/bundle
 markdown: redcarpet
 redcarpet:
   extensions:
   - fenced_code_blocks
+  - footnotes
 sass:
   style: :compressed
   sass_dir: _css
 gems:
 - jekyll-redirect-from
-react_version: 0.11.2
+react_version: 0.14.7

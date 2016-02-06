@@ -1,7 +1,16 @@
 # We can probably lint these later but not important at this point
-src/vendor
-src/vendor_deprecated
-# estraverse stumbles on XJSSpreadAttribute so just ignore tests for now
-src/**/__tests__/**
-# This should be enabled but that folder has too much in it that doesn't belong
-src/test
+src/shared/vendor
+# But not in docs/_js/examples/*
+docs/_js/*.js
+docs/js/
+docs/_site/
+# gems
+docs/vendor/bundle/
+# This should be more like examples/**/thirdparty/** but
+# we should fix https://github.com/facebook/esprima/pull/85 first
+examples/
+# Ignore built files.
+build/
+coverage/
+scripts/bench/bench-*.js
+vendor/*
